@@ -1,0 +1,327 @@
+<!-- Responsive 601 X 811 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About page</title>
+
+	<!-- link cdn fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- link bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<!-- link css -->
+	<link rel="stylesheet" href="restaurant.css">
+
+</head>
+
+<body>
+	<!-- Navbar --> 
+	<nav class="navbar">
+		<div class="logo" style="font-size: 30px;font-weight: 400;">
+			<i class="fa-solid fa-utensils"></i> <span>SpiceUp</span>
+		</div>
+		<div class="icons">
+			<i class="fa-solid fa-house" id="openHome"></i>
+			<i class="fa-solid fa-user" id="openDetails"></i>
+		</div>
+	</nav>
+	<!-- Main section -->
+	<main>
+		<div class="main1">
+			<div class="img">
+				<!-- carousels -->
+				<center>
+					<div id="carouselExampleIndicators" class="carousel slide">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="bg01.jpg" class="d-block " alt="..." width="80%" height="600px"
+									style="margin-top: 30px;">
+							</div>
+							<div class="carousel-item">
+								<img src="bg02.jpg" class="d-block" alt="..." width="80%" height="600px"
+									style="margin-top: 30px;">
+							</div>
+							<div class="carousel-item">
+								<img src="bg03.jpg" class="d-block " alt="..." width="80%" height="600px"
+									style="margin-top: 30px;">
+							</div>
+							<div class="carousel-item">
+								<img src="bg04.jpg" class="d-block " alt="..." width="80%" height="600px"
+									style="margin-top: 30px;">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</center>
+				<!-- carousel end -->
+			</div>
+		</div>
+		<div class="txt">
+			<h3 style="text-align: center; font-size: 24px;margin: 30px;">
+				<i class="fa-solid fa-quote-left"></i>
+				At our dining haven, we don't just serve food; we craft experiences. <br>
+				Let the spices dance on your plate, and every bite tell a tale of culinary adventure <br>
+				and , every dish is a celebration of bold and vibrant flavors
+				<i class="fa-solid fa-quote-right"></i>
+			</h3>
+		</div>
+		<br><br>
+	</main>
+	<br>
+	<hr>
+	<!-- About section -->
+	<section class="about1" id="about1">
+		<center>
+			<h2>About Us</h2>
+			<h3>Why Choose Us?</h3>
+		</center>
+		<div class="parent1">
+			<div class="image">
+				<img src="img07.jpg" style="border-radius:10%; height: 400px; width: 500px; padding: 20px;">
+			</div>
+			<div class="about">
+				<div class="card-body" style="margin: 20px;padding: 20px;">
+					<h3>Best Food In The Country</h3>
+					<p style="line-height: 30px;">
+						In the fast-paced world, the culinary landscape is evolving, and so are our dining habits.
+						The
+						traditional process of standing in queues over crowded spaces and waiting for a table at
+						restaurants has become a time consuming process for todays world. Recognizing the need for a
+						seamless and time-efficient dining solution, our project, "Spice Up Restaurant," aims to
+						bridge
+						the gap between culinary enthusiasts and delightful dining experiences.
+						In response to the challenges posed by the conventional dining approach, our web-based
+						solution
+						seeks to enhance the overall dining journey by providing users with the convenience of
+						pre-booking tables.
+					</p>
+					<div class="bt">
+						<button type="button" class="btn btn-success"><i class="fa-solid fa-truck-fast"></i> Free
+							Delivery</button>
+						<button type="button" class="btn btn-success"><i class="fa-brands fa-paypal"></i> Easy
+							Payment</button>
+						<button type="button" class="btn btn-success"><i class="fa-brands fa-servicestack"></i> 24/7
+							Service</button>
+					</div>
+					<button type="button" id="btn1" class="btn btn-dark" style="margin-top: 30px;">Learn More</button>
+				</div>			
+			</div>
+		</div>
+
+	</section>
+	<br>
+	<hr>
+	<!-- Meet our chef -->
+	<section id="chef" class="chef">
+		<center>
+			<h2 style="font-weight: 300;">Know About Us</h2>
+			<h3 style="font-weight: 300;"> Meet Our Master Chef's </h3>
+		</center>
+		<br><br>
+		<div class="parent1">
+			<div class="card">
+				<div class="img">
+					<center>
+						<img src="https://i.pinimg.com/736x/82/be/22/82be22fd558433e235a173c2257c0cbc.jpg"
+							style="height: 300px;width: 300px;">
+					</center>
+				</div>
+				<div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+					<div class="bg-light d-flex justify-content-center pt-2 px-1">
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="card-body">
+					<h5 class="card-text" style="text-align: center;">Chef Aditya Bhor </h5>
+				</div>
+			</div>
+			<div class="card">
+				<div class="img">
+					<center>
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HPDxXjr2G-lIu4kJ7NcnM8onvPsqD0BbBw&usqp=CAU"
+							style="height: 300px;width: 300px;">
+					</center>
+				</div>
+				<div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+					<div class="bg-light d-flex justify-content-center pt-2 px-1">
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="card-body">
+					<h5 class="card-text" style="text-align: center;">Chef Suresh Pillai</h5>
+				</div>
+			</div>
+			<div class="card">
+				<div class="img">
+					<center><img src="https://pngimg.com/d/chef_PNG72.png" style="height: 300px;width: 300px;"></center>
+				</div>
+				<div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+					<div class="bg-light d-flex justify-content-center pt-2 px-1">
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+						<a class="btn btn-sm-square btn-dark mx-1" href=""><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="card-body">
+					<h5 class="card-text" style="text-align: center;">Chef Shraddha Varma </h5>
+				</div>
+			</div>
+		</div>
+
+		<p id="para1"
+			style="text-align: center;margin-left: 100px;margin-right: 100px;margin-top: 30px;margin-bottom: 50px;">
+			"Experience excellence in every service we offer. From culinary delights that tantalize your taste buds to
+			personalized care that ensures your comfort, our commitment is to provide an unparalleled experience.
+			Discover a range of services designed to elevate your moments and make every visit extraordinary."</p>
+
+	</section>
+	<hr><br><br>
+	<!-- reviews section-->
+	<section class="review" id="review">
+		<center>
+			<h3>Customer Review</h3>
+			<h2>What They Say</h2>
+		</center>
+		<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+			<div class="container">
+				<div class="owl-carousel testimonial-carousel position-relative">
+					<div class="testimonial-item text-center">
+						<img class="border rounded-circle p-2 mx-auto mb-3"
+							src="https://media.istockphoto.com/id/953587362/photo/businessman-standing-with-his-arms-folded-stock-image.jpg?s=612x612&w=0&k=20&c=2bhNv1BMzip56xZzxNFAbBkxdKlzkT9TH9CnmtFnq1E="
+							style="width: 80px; height: 80px;">
+						<h5 class="mb-0">John doe</h5>
+						<div class="testimonial-text bg-light text-center p-4">
+							<p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+								et eos. Clita erat ipsum et lorem et sit.</p>
+						</div>
+					</div>
+					<div class="testimonial-item text-center">
+						<img class="border rounded-circle p-2 mx-auto mb-3"
+							src="https://media.istockphoto.com/id/1462700228/photo/happy-businessman-drinking-coffee-at-office.jpg?s=612x612&w=0&k=20&c=4ZjRh3q6qBIJ-Yx9Drfc6ylVo2WEcKBTMMOK1ppcyHo="
+							style="width: 80px; height: 80px;">
+						<h5 class="mb-0">Micheal</h5>
+						<div class="testimonial-text bg-light text-center p-4">
+							<p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+								et eos. Clita erat ipsum et lorem et sit.</p>
+						</div>
+					</div>
+					<div class="testimonial-item text-center">
+						<img class="border rounded-circle p-2 mx-auto mb-3"
+							src="https://media.istockphoto.com/id/1410798175/photo/smiling-indian-woman-formal-corporate-office-employee-at-workplace-looking-at-the-camera.jpg?s=612x612&w=0&k=20&c=v_de5SaLgKRz-mfo66WWIQqF9PmtI3O8ygtQPLnZipg="
+							style="width: 80px; height: 80px;">
+						<h5 class="mb-0">Isha patil</h5>
+						<div class="testimonial-text bg-light text-center p-4">
+							<p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+								et eos. Clita erat ipsum et lorem et sit.</p>
+						</div>
+					</div>
+					<div class="testimonial-item text-center">
+						<img class="border rounded-circle p-2 mx-auto mb-3"
+							src="https://media.istockphoto.com/id/1156420544/photo/business-person-stock-images.jpg?s=612x612&w=0&k=20&c=mZQT3FL6v_RHxUd6F_y5fUd_CtmWkBz5cMqMTyF9UuQ="
+							style="width: 80px; height: 80px;">
+						<h5 class="mb-0">Manoj sharma</h5>
+						<div class="testimonial-text bg-light text-center p-4">
+							<p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+								et eos. Clita erat ipsum et lorem et sit.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr><br><br>
+	<!-- footer -->
+	<footer>
+		<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+			<div class="container py-5">
+				<div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-3">Quick Link</h4>
+						<i class="fa-solid fa-greater-than"></i> <a href="#"
+							style="text-decoration: none; color: white;">Services</a><br>
+						<i class="fa-solid fa-greater-than"></i> <a href="#"
+							style="text-decoration: none; color: white;">Contact Us
+						</a><br>
+						<i class="fa-solid fa-greater-than"></i> <a href="#"
+							style="text-decoration: none; color: white;">
+							Privacy Policy</a> <br>
+						<i class="fa-solid fa-greater-than"></i> <a href="#"
+							style="text-decoration: none; color: white;">Terms &
+							Condition</a> <br>
+						<i class="fa-solid fa-greater-than"></i> <a href="#"
+							style="text-decoration: none; color: white;">FAQs &
+							Help </a><br>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-3">Contact</h4>
+						<h6 class="mb-2"><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</h6>
+						<h6 class="mb-2"><i class="fa-solid fa-phone"></i> +012 345 67890</h6>
+						<h6 class="mb-2"><i class="fa-solid fa-envelope"></i> example@123.com</h6>
+
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4 class="text-white mb-3">Follow Us</h4>
+						<h6 class="mb-2"><i class="fa-brands fa-youtube"></i> Spice upp <br></h6>
+						<h6 class="mb-2"><i class="fa-brands fa-instagram"></i> spiceee.__ <br></h6>
+						<h6 class="mb-2"><i class="fa-brands fa-facebook"></i> spiceUp._ <br></h6>
+						<h6 class="mb-2"><i class="fa-brands fa-twitter"></i> Spice Up<br></h6>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<h4>Give Your Feedback</h4>
+						<div class="position-relative mx-auto" style="max-width: 400px;">
+							<input class="form-control border-2 w-100 py-3 ps-4 pe-5" type="text"
+								placeholder="Write Feedback here">
+							<button type="button"
+								class="btn btn-dark py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="copyright">
+					<div class="row">
+						<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+							&copy; SpiceUp , All Right Reserved.<br><br>
+							Designed By , Robert D Clave<br>
+							Distributed By , Hezal Sanchaester <br><br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="restaurant.js"></script>
+</body>
+
+</html>

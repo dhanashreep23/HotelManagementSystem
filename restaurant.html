@@ -1,0 +1,558 @@
+<!-- 
+Spice Up Restaurant
+When we visit a restaurant, sometimes on a rush time, we have to stand
+in a queue to book a table. Thus we have to spend a long time to get a
+food in the restaurant!
+Nowadays, many restaurants have their own websites where customers
+can book the tables in advance.
+Design a website for a restaurant which provides information regarding
+food dishes and also provides the form to book the table.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SpiceUp Restaurant</title>
+    <!-- Link cdn font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- link CSS -->
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+
+<body>
+    <!-- Header --> 
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="font-size: 30px;font-weight: 400;">
+                <i class="fa-solid fa-utensils"></i> <span
+                    style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SpiceUp</span>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="http://localhost/signup/order.php">Order</a></li>
+                    <li><a href="http://localhost/signup/table.php">Book Table</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-house" id="openHome"></i>
+                <i class="fa-solid fa-user" id="openDetails"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <div class="hero">
+            <div class="text">
+                <h2>Enjoy The Fresh And <span style="color: #f14c8b;"> Delicious </span> Food With Us</h2>
+                <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()" style="margin-left: 50px;">Order Now</button>
+            </div>
+            <div class="image">
+                <img src="https://img.freepik.com/premium-photo/tasty-burger-isolated-white-background-fresh-hamburger-fast-food-with-beef-vegetables-cheese_969517-159.jpg"
+                    alt="Burger">
+            </div>
+        </div>
+    </main>
+    <hr>
+    <!-- Menu card -->
+    <center><h1>Menu Card</h1></center>
+    <div class="container">
+        <div class="menu-category">
+            <h2>Starter</h2>
+            <div class="menu-item">
+                <img src="img04.avif"  width="100px" height="80px">
+                <div>
+                    <h3>Veg Burger</h3>
+                    <p>Spicy and Crispy Burger loaded with cheese, topped with tomatoes, cucumber</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>            
+            <div class="menu-item">
+                <img src="img05.jpg" alt="Pizza"  width="100px" height="80px">
+                <div>
+                    <h3>Veg Pizza</h3>
+                    <p>Italic style pizza with loaded cheese and veggies on it</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img08.jpg"  width="100px" height="80px">
+                <div>
+                    <h3>Momos</h3>
+                    <p>Momos with green chutney</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img10.jpg"  width="100px" height="80px">
+                <div>
+                    <h3>Paneer Chilly Dry</h3>
+                    <p>Freshly cooked paneer chilly with spices and veggies</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img06.webp"  width="100px" height="80px">
+                <div>
+                    <h3>Hakka Noodles</h3>
+                    <p>Freshly cooked noodles with spices and veggies</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <br><br>
+            <h2>Drinks</h2>
+            <div class="menu-item">
+                <img src="img12.jpeg"  width="100px" height="80px">
+                <div>
+                    <h3>Coke</h3>
+                    <p>Classic Coca-Cola.</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img11.jpeg"  width="100px" height="80px">
+                <div>
+                    <h3>Lemonade</h3>
+                    <p>Freshly squeezed lemonade.</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img02.jpg" width="100px" height="80px">
+                <div>
+                    <h3>Chocolate Milkshake</h3>
+                    <p>Chocolate milkshake with chocolate toppings</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <br><br>
+            <h2>Deserts</h2>
+            <div class="menu-item">
+                <img src="img09.jpg" width="100px" height="80px">
+                <div>
+                    <h3>Pastry</h3>
+                    <p>Decadent white forest cake pastry with cherry.</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img03.avif" width="100px" height="80px">
+                <div>
+                    <h3>Pancake</h3>
+                    <p>Sweet and delicious pancake with honey, cherries and blackberries</p>
+                </div>
+                <div class="price">
+                    <h3>$ 15.09</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><hr>
+    <!-- Home Section -->
+    <section class="home" id="openHome">
+        <div class="exp-text">
+            <center>
+                <h3>Our Today's Menu</h3>
+                <h2>Popular Dishes</h2>
+                <p>Get Flat 50% OFF on your First Order USE code FLAT50</p>
+            </center>
+        </div>
+        <!-- card -->
+        <div class="parent1">
+            <div class="card" style="width: 18rem; cursor: pointer;">
+
+                <img src="img06.webp" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Noodles</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img02.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Chocolate Milkshake</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img09.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pastree</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img04.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Veg Burger</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="parent1">
+            <div class="card" style="width: 18rem;">
+                <img src="img05.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">$ 15.09</p><button type="button" class="btn btn-dark"
+                            onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img04.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Veg Burger</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img03.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pancake</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img09.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pastree</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="exp-text">
+            <center>
+                <h2>Most Ordered Dishes!!</h2>
+                <p>Get Flat 50% OFF on your First Order USE code FLAT50</p>
+            </center>
+        </div>
+        <center>
+            <h5 style="color: #392467;font-family:Verdana, Geneva, Tahoma, sans-serif">
+                " Discover the alchemy of flavors, where spices are the magic which transforms every meal into a
+                culinary enchantment "
+            </h5>
+        </center>
+        <!-- card -->
+        <div class="parent1">
+            <div class="card" style="width: 18rem; cursor: pointer;">
+
+                <img src="img06.webp" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Noodles</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img02.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Chocolate Milkshake</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img09.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pastree</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img04.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Veg Burger</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="parent1">
+            <div class="card" style="width: 18rem;">
+                <img src="img05.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">$ 15.09</p><button type="button" class="btn btn-dark"
+                            onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img04.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Veg Burger</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img03.avif" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pancake</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img09.jpg" width="200px" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pastree</h5>
+                        <p class="card-text">$ 15.09</p>
+                        <button type="button" class="btn btn-dark" onclick="redirectToOrderPage()">Order</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- About section-->
+    <section class="about" id="about">
+        <center>
+            <h2>About Us</h2>
+            <h3>Why Choose Us?</h3>
+        </center>
+        <div class="parent1">
+            <div class="image">
+                <img src="img07.jpg" style="border-radius:10%; height: 400px; width: 500px;">
+            </div>
+            <div class="about" style="width: 600px; text-align: center; margin: 50px 150px 0 0;">
+                <div class="card-body">
+                    <h3>Best Food In The Country</h3><br>
+                    <p style="font-size: 20px;">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus,commodi eaque
+                        aperiam provident voluptatibus quae ratione atque dolor, quod animi et architecto
+                        tempora eum unde perferendis quos tempore delectus enim repellat. Tenetur, ducimus,
+                        exercitationem iure repellendus voluptatibus at odit consequuntur cupiditate eius alias culpa
+                        praesentium quae? unde voluptate Odit hic porro quaerat voluptates unde deleniti
+                        perspiciatis. Harum aut ducimus deleniti aperiam perferendis, est voluptatibus distinctio
+                        nostrum, laudantium eos illum sapiente, quis animi adipisci.</p><br>
+                    <button type="button" class="btn btn-success"><i class="fa-solid fa-truck-fast"></i> Free
+                        Delivery</button>
+                    <button type="button" class="btn btn-success"><i class="fa-brands fa-paypal"></i> Easy
+                        Payment</button>
+                    <button type="button" class="btn btn-success"><i class="fa-brands fa-servicestack"></i> 24/7
+                        Service</button>
+                </div>
+                <button type="button" class="btn btn-dark" style="margin-top: 30px;">Learn More</button>
+            </div>
+        </div>
+
+    </section>
+    <hr>
+    <!-- Review section -->
+    <section class="review" id="review">
+        <center>
+            <h3>Customer Review</h3>
+            <h2>What They Say</h2>
+        </center>
+        <br><br>
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel position-relative">
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3"
+                            src="https://media.istockphoto.com/id/953587362/photo/businessman-standing-with-his-arms-folded-stock-image.jpg?s=612x612&w=0&k=20&c=2bhNv1BMzip56xZzxNFAbBkxdKlzkT9TH9CnmtFnq1E="
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">John doe</h5>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3"
+                            src="https://media.istockphoto.com/id/1462700228/photo/happy-businessman-drinking-coffee-at-office.jpg?s=612x612&w=0&k=20&c=4ZjRh3q6qBIJ-Yx9Drfc6ylVo2WEcKBTMMOK1ppcyHo="
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Micheal</h5>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3"
+                            src="https://media.istockphoto.com/id/1410798175/photo/smiling-indian-woman-formal-corporate-office-employee-at-workplace-looking-at-the-camera.jpg?s=612x612&w=0&k=20&c=v_de5SaLgKRz-mfo66WWIQqF9PmtI3O8ygtQPLnZipg="
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Isha patil</h5>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="border rounded-circle p-2 mx-auto mb-3"
+                            src="https://media.istockphoto.com/id/1156420544/photo/business-person-stock-images.jpg?s=612x612&w=0&k=20&c=mZQT3FL6v_RHxUd6F_y5fUd_CtmWkBz5cMqMTyF9UuQ="
+                            style="width: 80px; height: 80px;">
+                        <h5 class="mb-0">Manoj sharma</h5>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <hr>
+    <br><br>
+    <!-- Image Gallery section -->
+    <section class="gallery" id="gallery">
+        <center>
+            <h2>Image Gallery</h2>
+            <h3 style="font-family:Georgia, 'Times New Roman', Times, serif;">Some Images from our Restaurant</h3>
+        </center>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img01.jpg" width="300px" height="300px">
+            </div>
+            <div class="gallery-item">
+                <img src="img02.jpg" width="300px" height="300px">
+            </div>
+            <div class="gallery-item">
+                <img src="img07.jpg" width="300px" height="300px">
+            </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img09.jpg" width="300px" height="300px">
+            </div>
+            <div class="gallery-item">
+                <img src="img05.jpg" width="300px" height="300px">
+            </div>
+            <div class="gallery-item">
+                <img src="img10.jpg" width="300px" height="300px">
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section-->
+    <footer>
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Quick Link</h4>
+                        <i class="fa-solid fa-greater-than"></i> <a href="#"
+                            style="text-decoration: none; color: white;">Services</a><br>
+                        <i class="fa-solid fa-greater-than"></i> <a href="#"
+                            style="text-decoration: none; color: white;">Contact Us </a><br>
+                        <i class="fa-solid fa-greater-than"></i> <a href="#"
+                            style="text-decoration: none; color: white;">
+                            Privacy Policy</a> <br>
+                        <i class="fa-solid fa-greater-than"></i> <a href="#"
+                            style="text-decoration: none; color: white;">Terms & Condition</a> <br>
+                        <i class="fa-solid fa-greater-than"></i> <a href="#"
+                            style="text-decoration: none; color: white;">FAQs & Help </a><br>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Contact</h4>
+                        <h6 class="mb-2"><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</h6>
+                        <h6 class="mb-2"><i class="fa-solid fa-phone"></i> +012 345 67890</h6>
+                        <h6 class="mb-2"><i class="fa-solid fa-envelope"></i> example@123.com</h6>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Follow Us</h4>
+                        <h6 class="mb-2"><i class="fa-brands fa-youtube"></i> Spice upp <br></h6>
+                        <h6 class="mb-2"><i class="fa-brands fa-instagram"></i> spiceee.__ <br></h6>
+                        <h6 class="mb-2"><i class="fa-brands fa-facebook"></i> spiceUp._ <br></h6>
+                        <h6 class="mb-2"><i class="fa-brands fa-twitter"></i> Spice Up<br></h6>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4>Give Your Feedback</h4>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-2 w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Write Feedback here">
+                            <button type="button"
+                                class="btn btn-dark py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; SpiceUp , All Right Reserved.<br><br>
+                            Designed By , Robert D Clave<br>
+                            Distributed By , Hezal Sanchaester <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link Javascript -->
+    <script src="restaurant.js"></script>
+</body>
+
+</html>
